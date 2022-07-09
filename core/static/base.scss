@@ -1,0 +1,111 @@
+.prayer{
+  ul{
+    list-style: none;
+    display: flex;
+    background-color: #dabbf7;
+    justify-content: center;
+    li{
+      padding: 1rem;
+      margin: 0 15px;
+      font-size: 18px;
+      font-weight: 300;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+  }
+}
+.today-courses{
+  text-align: center;
+}
+.udemy{
+  
+  ul{
+    li{
+      list-style: decimal;
+      font-size: 20px;
+      font-weight: bold;
+      padding: 10px;
+    }
+    
+  }
+  .row{
+    
+  padding: 5px;
+
+  }
+  .course{
+    justify-content: center;
+    text-align: center;
+  }
+  img{
+    width: 30%;
+    margin-bottom: 10px;
+    border-radius: 40px;
+    &:hover{
+      transform: scale(1.1);
+     
+    }
+  }
+  #email{
+    color: #9d5ed8;
+    &:hover{
+      color: #674e7e;
+      
+    }
+  }
+  h4{
+    padding-bottom: 8px;
+    animation: color 20s infinite alternate ease-in-out ;
+  }
+  @keyframes color{
+    0%{
+      color: black;}
+    100%{
+      color: #32065c;
+    }
+  }
+    
+  a:visited{
+    button{
+      background-color: #d3d3d4;
+      border-color: black;
+      color: black;
+      font-weight: bold;
+    }
+  }
+  a{
+    text-align: center;
+    button{
+      background-color: #8a2be2;
+      align-self: center;
+      justify-self: center;
+      color: white;
+      padding: 10px;
+      
+      width: 70%;
+      border-radius: 10px;
+      &:hover{
+        background-color: #32065c;
+        color: whitesmoke;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px){
+  .prayer{
+  ul{
+    justify-content: center;
+    flex-wrap: wrap;
+      li{
+        padding: .6rem;
+        margin: 0 5px;
+        font-size: 16px;
+        font-weight: 300;
+      }
+    }
+  }
+  .udemy{
+    img{
+      width: 100%;
+    }
+  }
+}

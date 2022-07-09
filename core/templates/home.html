@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% load static %}
+{% block body %}
+
+{% comment %} {% for key,value in prayer_time %}
+<li>{{key}}</li>
+
+{% endfor %} {% endcomment %}
+<div class="prayer">
+    <ul>
+        {% for pray,time in prayer_time.items %}
+        <li>{{pray}} : {{time}}</li>
+        {% endfor %}
+    </ul>
+</div>
+<div class="container udemy">
+    
+    <div class="today-courses">
+        <h2>Courses of day : {{today_date}}</h2>
+    <br>
+    <h3>Number of courses {{total_length}}</h3>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <p style="font-size:20px;">If there is any problem just send a message to <a id='email' href = "mailto: admin@aboelezz.com">Send Email</a></p>
+    <div class="alert alert-dark" role="alert">
+        the button will be with this color if you have visted the course before
+      </div>
+    <ul>
+        {% for key,value in get_courses.items %}
+        <li>
+            <h4 class='row'>{{key}}</h4> 
+            <div class="row course">
+
+                {% for x in value %}
+                {% if forloop.first %}
+             
+
+                    <img src="{{x}}" alt="" >
+            
+                
+                {% elif forloop.last %}
+                <div class="row ">
+
+                    <a href="{{x}}" target='_blank'><button class='btn btn-info'>Enroll in the course </button></a>
+
+                </div>
+                {% else %}
+                <div class="row course">
+                    <p>{{x}}</p>
+                </div>
+                
+                {% endif %}
+                
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </ul>
+</div>
+
+
+{% endblock body %}
